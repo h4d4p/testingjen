@@ -18,7 +18,7 @@ declare
   l_compilation_errors := l_compilation_errors
   ||  chr(10)
   ||  '  ' 
-  || rpad(rec_invalid_ object.object_type, 20) 
+  || rpad(rec_invalid_object.object_type, 20) 
   || rec_invalid_object.object_name;
   end loop;
   
