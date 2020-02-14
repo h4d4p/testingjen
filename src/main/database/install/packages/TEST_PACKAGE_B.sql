@@ -1,6 +1,6 @@
 --liquibase formatted sql
---changeset author:ali3lo
 --validCheckSum: ANY
+	
 CREATE OR REPLACE PACKAGE BODY TEST_PACKAGE AS  
 
   FUNCTION TEST_FUNC
