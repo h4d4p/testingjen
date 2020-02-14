@@ -4,6 +4,8 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
     
 	<includeAll path="src/main/database/install/packages"/>
+    <validCheckSum>ANY</validCheckSum>
+	<includeAll path="src/main/database/install/packages" />
 	<!-- <includeAll file="src/main/database/install" filter="sql"/> -->
   <!-- <include file="src/main/database/changelog/latest/1.0.xml" />  -->
   <!-- <include file="src/main/database/changelog/data/1.0.xml" />  -->
