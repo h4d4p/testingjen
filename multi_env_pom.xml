@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"         
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+		 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 <modelVersion>4.0.0</modelVersion>
+ 
+  <groupId>com.contribute.apex</groupId>
+  <artifactId>orclapex-maven-demo</artifactId>
+  <version>1.0</version>
+  
+	<parent>
+		<groupId>com.contribute.apex</groupId>
+		<artifactId>orclapex-maven-demo-parent</artifactId>
+		<version>1.0</version>
+		<relativePath>parent_pom.xml</relativePath>
+	</parent>
+  
+  <profiles>
+    <profile>
+      <id>dev</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+		<properties>
+		<database.url>jdbc:oracle:thin:@localhost:1521/smartex.smartsoft.local</database.url>
+		<database.sqlplusUrl>localhost:1521/smartex.smartsoft.local</database.sqlplusUrl>
+		<database.username>test_schema</database.username>
+		<database.password>123</database.password>
+		<apex.workspace>project_demo_WS</apex.workspace>
+		<apex.appid>106</apex.appid>
+		</properties>
+      <build>
+      </build>
+	  
+    </profile>
+	
+	<profile>
+      <id>test</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+		<properties>
+		<database.url>jdbc:oracle:thin:@localhost:1521/orcl</database.url>
+		<database.sqlplusUrl>localhost:1521/orcl</database.sqlplusUrl>
+		<database.username>admin</database.username>
+		<database.password>Smart_emp2020</database.password>
+		<apex.workspace>project_demo_WS</apex.workspace>
+		<apex.appid>106</apex.appid>
+		</properties>
+
+      <build>
+	
+	
+	
+      </build>
+	  
+    </profile>
+	
+	
+  </profiles>
+  <build>
+	<plugins>
+	<plugin>
+	<groupId>org.liquibase</groupId>
+	<artifactId>liquibase-maven-plugin</artifactId>
+	</plugin>
+	</plugins>
+  </build>
+</project>
+
+
