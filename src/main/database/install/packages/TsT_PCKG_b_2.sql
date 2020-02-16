@@ -1,5 +1,4 @@
 --liquibase formatted sql
---validCheckSum: ANY
 --changeset author: id1 dbms: oracle runOnChange: true 
 
 CREATE OR REPLACE PACKAGE BODY TsT_PCG_2 AS  
