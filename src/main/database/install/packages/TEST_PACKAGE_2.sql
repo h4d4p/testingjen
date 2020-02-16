@@ -1,3 +1,6 @@
+--liquibase formatted sql
+--validCheckSum: ANY
+
 CREATE OR REPLACE PACKAGE TEST_PACKAGE_2 AS
 
 	FUNCTION TEST_FUNC
