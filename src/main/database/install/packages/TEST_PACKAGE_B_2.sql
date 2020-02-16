@@ -1,0 +1,19 @@
+--liquibase formatted sql
+--validCheckSum: ANY
+	
+CREATE OR REPLACE PACKAGE BODY TEST_PACKAGE AS  
+
+  FUNCTION TEST_FUNC
+  (
+    P1 NUMBER ,
+    P2 VARCHAR2 ,
+  )
+  RETURN VARCHAR2
+  IS
+  BEGIN
+    RETURN NULL;
+  END;
+
+
+
+END TEST_PACKAGE;
