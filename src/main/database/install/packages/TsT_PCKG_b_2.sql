@@ -1,6 +1,5 @@
 --liquibase formatted sql
---changeset author: id1 runOnChange: true 
---splitStatements: false 
+--changeset author:id1 splitStatements:false runOnChange:true
 
 CREATE OR REPLACE PACKAGE BODY TsT_PCG_2 AS  
 
