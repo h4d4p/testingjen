@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset author:TEST_PACKAGE splitStatements:false runOnChange:true
+--changeset author:TEST_PACKAGE splitStatements:false runOnChange:true stripComments:true
 
 CREATE OR REPLACE PACKAGE TEST_PACKAGE AS
 
@@ -7,7 +7,7 @@ CREATE OR REPLACE PACKAGE TEST_PACKAGE AS
 	(
 		P1 NUMBER,
 		P2 VARCHAR2
-		
+	-- testing	
 	)RETURN VARCHAR2;
 
 
