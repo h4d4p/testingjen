@@ -6,12 +6,15 @@
 
   <!-- tables -->
 
-  <changeSet id="TsT_PCKG_2" author="nick.buytaert">
-    <sqlFile  path="../../database/install/packages/TsT_PCKG_2.sql"
-	splitStatements="false"
-	runOnChange="true"
-	relativetochangelogfile="true"
-	/>
+  <changeSet
+  id="TsT_PCKG_2" 
+  author="nick.buytaert"
+  splitStatements="false"
+  runOnChange="true"
+  relativetochangelogfile="true">
+  
+    <sqlFile  path="../../database/install/packages/TsT_PCKG_2.sql"/>
+	
   </changeSet>
 
 
