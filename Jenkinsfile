@@ -1,23 +1,9 @@
 pipeline {
    agent any
-
 		tools {
-		git 'Default'
-		// Install the Maven version configured as "M3" and add it to the path.
-		maven 'maven_'
-
-		}
-			
-				void setBuildStatus(String message, String state) {
-		step([
-			$class: "GitHubCommitStatusSetter",
-			reposSource: [$class: "ManuallyEnteredRepositorySource", url: "https://github.com/h4d4p/testingjen"],
-			contextSource: [$class: "ManuallyEnteredCommitContextSource", context: "ci/jenkins/build-status"],
-			errorHandlers: [[$class: "ChangingBuildStatusErrorHandler", result: "UNSTABLE"]],
-			statusResultSource: [ $class: "ConditionalStatusResultSource", results: [[$class: "AnyBuildResult", message: message, state: state]] ]
-		]);
-		}
-
+			// Install the Maven version configured as "M3" and add it to the path.
+			maven 'maven_'
+			}
 		stages {
 			stage('Build') {
 				steps {
@@ -30,13 +16,10 @@ pipeline {
 				
 			}
 		}
-   
-		post {
+			post {
 		success {
-			setBuildStatus("Build succeeded", "SUCCESS");
-		}
-		failure {
-			setBuildStatus("Build failed", "FAILURE");
-		}
-		}
+			setGitHubPullRequestStatus context: 'Success', message: 'Success', state: 'SUCCESS'
+				}
+			}
+
 }
