@@ -15,6 +15,15 @@
     <sqlFile  path="src/main/database/install/packages/TsT_PCKG_2.sql" splitStatements="false"/>
 	
   </changeSet>
-
+  
+	<changeSet
+  id="TsT_PCKG_b_2" 
+  author="nick.buytaert"
+  runOnChange="true"
+  >
+  
+    <sqlFile  path="src/main/database/install/packages/TsT_PCKG_b_2.sql" splitStatements="false"/>
+	
+  </changeSet>
 
 </databaseChangeLog>
