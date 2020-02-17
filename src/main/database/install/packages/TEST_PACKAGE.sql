@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset author:id1 splitStatements:false runOnChange:true
+--changeset author:TEST_PACKAGE splitStatements:false runOnChange:true
 
 CREATE OR REPLACE PACKAGE TEST_PACKAGE AS
 
