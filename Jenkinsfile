@@ -1,14 +1,14 @@
 pipeline {
    agent any
 
-   tools {
-      // Install the Maven version configured as "M3" and add it to the path.
-      maven 'maven_'
-   }
+		tools {
+		// Install the Maven version configured as "M3" and add it to the path.
+		maven 'maven_'
+		}
 	
-			def getRepoURL() {
-		  sh "git config --get remote.origin.url > .git/remote-url"
-		  return readFile(".git/remote-url").trim()
+		def getRepoURL() {
+		sh "git config --get remote.origin.url > .git/remote-url"
+		return readFile(".git/remote-url").trim()
 		}
 
 		def getCommitSha() {
@@ -37,25 +37,25 @@ pipeline {
 		  ])
 		}
 
-
-   stages {
-      stage('Build') {
-        steps {
-           // Get some code from a GitHub repository
-           git 'https://github.com/h4d4p/testingjen'
-
-           // Run Maven.
-           bat "mvn -f multi_env_pom.xml -P dev compile"	
-        }
+		stages {
+			stage('Build') {
+				steps {
+				// Get some code from a GitHub repository
+				git 'https://github.com/h4d4p/testingjen'
 		
-      }
-   }
+				// Run Maven.
+				bat "mvn -f multi_env_pom.xml -P dev compile"	
+				}
+				
+			}
+		}
    
-   post {
-    success {
-        setBuildStatus("Build succeeded", "SUCCESS");
-    }
-    failure {
-        setBuildStatus("Build failed", "FAILURE");
-    }
+		post {
+		success {
+			setBuildStatus("Build succeeded", "SUCCESS");
+		}
+		failure {
+			setBuildStatus("Build failed", "FAILURE");
+		}
+		}
 }
