@@ -9,11 +9,10 @@
   <changeSet
   id="TsT_PCKG_2" 
   author="nick.buytaert"
-
   runOnChange="true"
-  relativetochangelogfile="true">
+  >
   
-    <sqlFile  path="../../database/install/packages/TsT_PCKG_2.sql"/>
+    <sqlFile  path="../../database/install/packages/TsT_PCKG_2.sql" splitStatements="false" relativetochangelogfile="true" />
 	
   </changeSet>
 
