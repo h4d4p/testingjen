@@ -1,3 +1,6 @@
+--liquibase formatted sql
+--changeset author:id1 splitStatements:false runOnChange:true
+
 CREATE OR REPLACE PACKAGE TEST_PACKAGE AS
 
 	FUNCTION TEST_FUNC

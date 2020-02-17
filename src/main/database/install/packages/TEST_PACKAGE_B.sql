@@ -1,5 +1,5 @@
 --liquibase formatted sql
---validCheckSum: ANY
+--changeset author:id1 splitStatements:false runOnChange:true
 	
 CREATE OR REPLACE PACKAGE BODY TEST_PACKAGE AS  
 
