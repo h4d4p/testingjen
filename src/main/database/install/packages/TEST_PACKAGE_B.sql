@@ -9,7 +9,10 @@ CREATE OR REPLACE PACKAGE BODY TEST_PACKAGE AS
     P2 VARCHAR2
   ) RETURN VARCHAR2
   IS
+  l_char VARCHAR2;
   BEGIN
+		  l_char  := "هشام عادل";
+
     RETURN NULL;
   END;
 
