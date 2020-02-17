@@ -2,17 +2,19 @@ pipeline {
    agent any
 
 		tools {
+		git 'Default'
 		// Install the Maven version configured as "M3" and add it to the path.
 		maven 'maven_'
+
 		}
 	
 		def getRepoURL() {
-		sh "git config --get remote.origin.url > .git/remote-url"
+		bat "git config --get remote.origin.url > .git/remote-url"
 		return readFile(".git/remote-url").trim()
 		}
 
 		def getCommitSha() {
-		  sh "git rev-parse HEAD > .git/current-commit"
+		  bat "git rev-parse HEAD > .git/current-commit"
 		  return readFile(".git/current-commit").trim()
 		}
 
