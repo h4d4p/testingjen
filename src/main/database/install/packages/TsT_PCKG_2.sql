@@ -1,6 +1,5 @@
 --liquibase formatted sql
---changeset author: id1 runOnChange: true 
---splitStatements: false 
+--changeset author:id1 splitStatements:false runOnChange:true
 
 CREATE OR REPLACE PACKAGE TsT_PCG_2 AS
 
@@ -9,6 +8,7 @@ CREATE OR REPLACE PACKAGE TsT_PCG_2 AS
 		P1 NUMBER
 	)
 	-- for testing
+	-- for testing2
 	RETURN VARCHAR2;
 
 
