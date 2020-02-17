@@ -14,14 +14,12 @@ pipeline {
 				bat "mvn -f multi_env_pom.xml -P dev compile"	
 				}
 				
-				post {
-				success {
-				setGitHubPullRequestStatus context: 'Success', message: 'Success', state: 'SUCCESS'
-				}
-				unsuccessful {
-				setGitHubPullRequestStatus context: 'failure', message: 'failure', state: 'FAILURE'
-				}
-				}	
 			}
 		}
+			post {
+		success {
+			setGitHubPullRequestStatus context: 'Success', message: 'Success', state: 'SUCCESS'
+				}
+			}
+
 }
