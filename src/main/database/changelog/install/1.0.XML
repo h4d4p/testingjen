@@ -6,23 +6,13 @@
 
   <!-- tables -->
 
-  <changeSet id="create_dept" author="nick.buytaert">
-    <sqlFile path="src/main/database/install/table/create_dept.sql" />
+  <changeSet id="TsT_PCKG_2" author="nick.buytaert">
+    <sqlFile  path="../../database/install/packages/TsT_PCKG_2.sql"
+	splitStatements="false"
+	runOnChange="true"
+	relativetochangelogfile="true"
+	/>
   </changeSet>
 
-  <changeSet id="create_emp" author="nick.buytaert">
-    <sqlFile path="src/main/database/install/table/create_emp.sql" />
-  </changeSet>
-
-
-  <!-- sequences -->
-
-  <changeSet id="create_seq_dept" author="nick.buytaert">
-    <sqlFile path="src/main/database/install/sequence/create_seq_dept.sql" />
-  </changeSet>
-
-  <changeSet id="create_seq_emp" author="nick.buytaert">
-    <sqlFile path="src/main/database/install/sequence/create_seq_emp.sql" />
-  </changeSet>
 
 </databaseChangeLog>
