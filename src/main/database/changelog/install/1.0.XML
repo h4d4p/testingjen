@@ -12,7 +12,7 @@
   runOnChange="true"
   >
   
-    <sqlFile  path="../../database/install/packages/TsT_PCKG_2.sql" splitStatements="false" relativetochangelogfile="true" />
+    <sqlFile  path="src/main/database/install/packages/TsT_PCKG_2.sql"/>
 	
   </changeSet>
 
