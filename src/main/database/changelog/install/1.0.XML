@@ -9,7 +9,7 @@
   <changeSet
   id="TsT_PCKG_2" 
   author="nick.buytaert"
-  splitStatements="false"
+  <!-- splitStatements="false" -->
   runOnChange="true"
   relativetochangelogfile="true">
   
