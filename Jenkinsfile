@@ -21,7 +21,6 @@ pipeline {
 				unsuccessful {
 				setGitHubPullRequestStatus context: 'failure', message: 'failure', state: 'FAILURE'
 				}
-				
 				}	
 			}
 		}
