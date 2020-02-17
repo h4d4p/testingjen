@@ -8,6 +8,7 @@ CREATE OR REPLACE PACKAGE TsT_PCG_2 AS
 	(
 		P1 NUMBER
 	)
+	-- for testing
 	RETURN VARCHAR2;
 
 
