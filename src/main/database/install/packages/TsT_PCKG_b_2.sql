@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset author:TsT_PCG_2 splitStatements:false runOnChange:true
+--changeset author:TEST_PACKAGE splitStatements:false runOnChange:true stripComments:false
 
 CREATE OR REPLACE PACKAGE BODY TsT_PCG_2 AS  
 	-- testing	

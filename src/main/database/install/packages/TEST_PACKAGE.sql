@@ -2,7 +2,7 @@
 --changeset author:TEST_PACKAGE splitStatements:false runOnChange:true stripComments:false
 
 CREATE OR REPLACE PACKAGE TEST_PACKAGE AS
-
+	-- testing	
 	FUNCTION TEST_FUNC
 	(
 		P1 NUMBER,
